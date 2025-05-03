@@ -1,0 +1,470 @@
+root: ProjectsBotArchitect_AI
+project_structure:
+  - path: "00_init/"
+    type: directory
+    description: "🔧 Инициализация проекта и мета-информация"
+  - path: "00_init/.git/"
+    type: directory
+    description: "📊 Локальный Git-репозиторий"
+  - path: "00_init/.gitignore"
+    type: file
+    description: "📋 Игнорируемые файлы"
+  - path: "00_init/LICENSE"
+    type: file
+    description: "📜 Лицензия проекта"
+  - path: "00_init/README.md"
+    type: file
+    description: "📚 Главный файл документации"
+  - path: "00_init/pyproject.toml"
+    type: file
+    description: "🧩 Конфигурация зависимостей через Poetry"
+  - path: "00_init/init.sh"
+    type: file
+    description: "🚀 Скрипт первичной инициализации"
+  - path: "00_init/structure_map.md"
+    type: file
+    description: "🗺️ Карта структуры проекта"
+  - path: "01_core/"
+    type: directory
+    description: "🧠 Генерация, обучение, поведение агентов"
+  - path: "01_core/agent_generator/"
+    type: directory
+    description: "🎛 Генерация агентов по шаблону и манифесту"
+  - path: "01_core/agent_generator/generator.py"
+    type: file
+    description: "🛠️ Логика сборки агентов"
+  - path: "01_core/agent_generator/initializer.py"
+    type: file
+    description: "⚙️ Создание папок, конфигов"
+  - path: "01_core/agent_generator/validator.py"
+    type: file
+    description: "✅ Проверка целостности"
+  - path: "01_core/agent_generator/manifest_schema.yaml"
+    type: file
+    description: "📄 Схема JSON-манифеста агента"
+  - path: "01_core/behavior_manager.py"
+    type: file
+    description: "🧠 Управление поведением и реакцией агентов"
+  - path: "01_core/learning_engine.py"
+    type: file
+    description: "🧬 Механика дообучения и навыков агентов"
+  - path: "01_core/multiagent_builder.py"
+    type: file
+    description: "🤖 Командообразование (ролевая логика)"
+  - path: "01_core/__init__.py"
+    type: file
+    description: "📦 Инициализация ядра"
+  - path: "02_agents/"
+    type: directory
+    description: "🤖 Шаблоны и инстансы агентов"
+  - path: "02_agents/base_templates/"
+    type: directory
+    description: "🧩 Базовые шаблоны агентов"
+  - path: "02_agents/base_templates/base_agent.yaml"
+    type: file
+    description: "📄 Общий шаблон логики"
+  - path: "02_agents/base_templates/monitoring_agent.yaml"
+    type: file
+    description: "🔍 Специализированный шаблон"
+  - path: "02_agents/instances/"
+    type: directory
+    description: "🚀 Реализованные агенты"
+  - path: "02_agents/instances/developer_assistant/"
+    type: directory
+    description: "👨‍💻 Агент-помощник для разработчиков"
+  - path: "02_agents/instances/developer_assistant/config.json"
+    type: file
+    description: "⚙️ Конфигурация"
+  - path: "02_agents/instances/developer_assistant/core.py"
+    type: file
+    description: "🧠 Логика взаимодействия"
+  - path: "02_agents/instances/developer_assistant/README.md"
+    type: file
+    description: "📘 Документация"
+  - path: "02_agents/instances/rebuilder_agent/"
+    type: directory
+    description: "🧱 Агент восстановления структуры"
+  - path: "02_agents/instances/rebuilder_agent/config.json"
+    type: file
+    description: "⚙️ Конфигурация"
+  - path: "02_agents/instances/rebuilder_agent/main.py"
+    type: file
+    description: "🔧 Основная логика"
+  - path: "02_agents/instances/rebuilder_agent/README.md"
+    type: file
+    description: "📘 Документация"
+  - path: "02_agents/registry.yaml"
+    type: file
+    description: "📋 Реестр всех зарегистрированных агентов"
+  - path: "03_data/"
+    type: directory
+    description: "📚 Базы знаний и индексы"
+  - path: "03_data/knowledge_base/"
+    type: directory
+    description: "📚 Основная база знаний"
+  - path: "03_data/knowledge_base/topics_index.yaml"
+    type: file
+    description: "🗂 Индексация тем и категорий"
+  - path: "03_data/knowledge_base/agent_topic_map.yaml"
+    type: file
+    description: "🤖 Темы, охватываемые агентами"
+  - path: "03_data/knowledge_base/embeddings.npy"
+    type: file
+    description: "🧬 Векторные представления тем"
+  - path: "03_data/knowledge_graph/"
+    type: directory
+    description: "🔗 Граф знаний"
+  - path: "03_data/knowledge_graph/nodes.csv"
+    type: file
+    description: "🧠 Сущности в графе знаний"
+  - path: "03_data/knowledge_graph/edges.csv"
+    type: file
+    description: "🔗 Связи между сущностями"
+  - path: "03_data/knowledge_graph/visualize_kg.py"
+    type: file
+    description: "🖼️ Визуализация графа"
+  - path: "03_data/README.md"
+    type: file
+    description: "📘 Общее описание базы данных"
+  - path: "04_services/"
+    type: directory
+    description: "🛠 Обработчики, лицензии, обновления"
+  - path: "04_services/self_tester/"
+    type: directory
+    description: "🧪 Самопроверка проекта и агентов"
+  - path: "04_services/self_tester/structure_checker.py"
+    type: file
+    description: "✅ Проверка структуры"
+  - path: "04_services/self_tester/license_checker.py"
+    type: file
+    description: "📜 Проверка лицензий"
+  - path: "04_services/self_tester/policy_checker.py"
+    type: file
+    description: "🔒 Политики безопасности"
+  - path: "04_services/self_tester/agent_status_monitor.py"
+    type: file
+    description: "🩺 Мониторинг агентов"
+  - path: "04_services/updater/"
+    type: directory
+    description: "🔄 Обновления и миграции"
+  - path: "04_services/updater/version_checker.py"
+    type: file
+    description: "🔍 Проверка новых версий"
+  - path: "04_services/updater/update_downloader.py"
+    type: file
+    description: "📥 Загрузка обновлений"
+  - path: "04_services/updater/migration_runner.py"
+    type: file
+    description: "🔧 Миграции файлов и данных"
+  - path: "04_services/updater/autoupdate_config.yaml"
+    type: file
+    description: "⚙️ Настройки автообновления"
+  - path: "04_services/license_manager.py"
+    type: file
+    description: "📑 Управление лицензиями и условиями"
+  - path: "04_services/__init__.py"
+    type: file
+    description: "📦 Инициализация сервиса"
+  - path: "05_interfaces/"
+    type: directory
+    description: "🌐 Web и API-интерфейсы"
+  - path: "05_interfaces/api/"
+    type: directory
+    description: "🌐 REST и WebSocket интерфейсы"
+  - path: "05_interfaces/api/main_router.py"
+    type: file
+    description: "🔀 Основной маршрутизатор API"
+  - path: "05_interfaces/api/endpoints/"
+    type: directory
+    description: "📍 Эндпоинты API"
+  - path: "05_interfaces/api/endpoints/agent_endpoints.py"
+    type: file
+    description: "🤖 Управление агентами"
+  - path: "05_interfaces/api/endpoints/admin_endpoints.py"
+    type: file
+    description: "🛠 Админ-интерфейс"
+  - path: "05_interfaces/api/docs/"
+    type: directory
+    description: "📄 Swagger/OpenAPI документация"
+  - path: "05_interfaces/web_ui/"
+    type: directory
+    description: "🌍 Веб-интерфейс для пользователей"
+  - path: "05_interfaces/web_ui/app.py"
+    type: file
+    description: "🌐 Flask или FastAPI UI"
+  - path: "05_interfaces/web_ui/templates/"
+    type: directory
+    description: "🧩 HTML-шаблоны"
+  - path: "05_interfaces/web_ui/static/"
+    type: directory
+    description: "🎨 CSS, JS, изображения"
+  - path: "05_interfaces/web_ui/README.md"
+    type: file
+    description: "📘 Документация по интерфейсу"
+  - path: "05_interfaces/README.md"
+    type: file
+    description: "📘 Общая информация об интерфейсах"
+  - path: "06_tests/"
+    type: directory
+    description: "✅ Все виды тестов"
+  - path: "06_tests/unit/"
+    type: directory
+    description: "🔬 Модульные тесты"
+  - path: "06_tests/unit/test_generator.py"
+    type: file
+    description: "✅ Проверка генератора агентов"
+  - path: "06_tests/unit/test_learning.py"
+    type: file
+    description: "✅ Проверка обучающего движка"
+  - path: "06_tests/unit/test_utils.py"
+    type: file
+    description: "✅ Утилитарные проверки"
+  - path: "06_tests/integration/"
+    type: directory
+    description: "🔗 Интеграционные тесты"
+  - path: "06_tests/integration/test_api_integration.py"
+    type: file
+    description: "🌐 Проверка взаимодействия через API"
+  - path: "06_tests/integration/test_agent_flows.py"
+    type: file
+    description: "🔄 Проверка сквозных сценариев агентов"
+  - path: "06_tests/functional/"
+    type: directory
+    description: "⚙️ Функциональные тесты"
+  - path: "06_tests/functional/test_create_agent.py"
+    type: file
+    description: "⚙️ Полный цикл создания агента"
+  - path: "06_tests/functional/test_user_login.py"
+    type: file
+    description: "🔐 Аутентификация пользователя"
+  - path: "06_tests/functional/test_web_dashboard.py"
+    type: file
+    description: "🖥 Проверка UI-интерфейса"
+  - path: "06_tests/test_data/"
+    type: directory
+    description: "📁 Примеры тестовых входов и ответов"
+  - path: "06_tests/test_data/sample_config.json"
+    type: file
+    description: "📄 Конфиг агента для теста"
+  - path: "06_tests/test_data/sample_input.json"
+    type: file
+    description: "📄 Входные данные для сценариев"
+  - path: "06_tests/test_data/sample_output.json"
+    type: file
+    description: "📄 Ожидаемый результат"
+  - path: "07_docs/"
+    type: directory
+    description: "📖 Документация и гайды"
+  - path: "07_docs/user_manual/"
+    type: directory
+    description: "📘 Руководство пользователя"
+  - path: "07_docs/user_manual/getting_started.md"
+    type: file
+    description: "🚀 Первые шаги"
+  - path: "07_docs/user_manual/agent_usage.md"
+    type: file
+    description: "🤖 Как пользоваться агентами"
+  - path: "07_docs/user_manual/faq.md"
+    type: file
+    description: "❓ Часто задаваемые вопросы"
+  - path: "07_docs/developer_manual/"
+    type: directory
+    description: "🛠 Руководство для разработчиков"
+  - path: "07_docs/developer_manual/architecture.md"
+    type: file
+    description: "🏛 Архитектура проекта"
+  - path: "07_docs/developer_manual/dev_setup.md"
+    type: file
+    description: "⚙️ Настройка окружения"
+  - path: "07_docs/developer_manual/contributing.md"
+    type: file
+    description: "🤝 Внесение изменений"
+  - path: "07_docs/api_reference/"
+    type: directory
+    description: "📑 API-документация"
+  - path: "07_docs/api_reference/rest_endpoints.md"
+    type: file
+    description: "🌐 REST API"
+  - path: "07_docs/api_reference/websocket.md"
+    type: file
+    description: "🔌 WebSocket интерфейсы"
+  - path: "07_docs/security_guides/"
+    type: directory
+    description: "🔐 Безопасность и стандарты"
+  - path: "07_docs/security_guides/gdpr_compliance.md"
+    type: file
+    description: "📜 GDPR и обработка данных"
+  - path: "07_docs/security_guides/secure_dev_guide.md"
+    type: file
+    description: "🔒 Безопасная разработка"
+  - path: "07_docs/security_guides/incident_response.md"
+    type: file
+    description: "🚨 Реагирование на инциденты"
+  - path: "08_ci_cd/"
+    type: directory
+    description: "🔁 Скрипты автоматизации и GitHub Actions"
+  - path: "08_ci_cd/workflows/"
+    type: directory
+    description: "⚙️ Набор скриптов CI/CD"
+  - path: "08_ci_cd/workflows/test_and_lint.yml"
+    type: file
+    description: "🧪 Тесты и проверка стиля кода"
+  - path: "08_ci_cd/workflows/build_and_package.yml"
+    type: file
+    description: "📦 Сборка и упаковка агентов"
+  - path: "08_ci_cd/workflows/deploy_production.yml"
+    type: file
+    description: "🚀 Деплой на продакшн"
+  - path: "08_ci_cd/workflows/security_scan.yml"
+    type: file
+    description: "🔒 Сканы безопасности"
+  - path: "08_ci_cd/workflows/update_changelog.yml"
+    type: file
+    description: "📝 Автообновление CHANGELOG"
+  - path: "08_ci_cd/README.md"
+    type: file
+    description: "📘 Документация по CI/CD"
+  - path: "09_exports/"
+    type: directory
+    description: "📦 Сборки агентов и моделей"
+  - path: "09_exports/agents/"
+    type: directory
+    description: "🔒 Экспортированные агенты"
+  - path: "09_exports/agents/security_bot_v1.zip"
+    type: file
+    description: "🔒 Архив агента по безопасности"
+  - path: "09_exports/agents/monitor_bot_v2.zip"
+    type: file
+    description: "📈 Агент мониторинга"
+  - path: "09_exports/agents/document_bot_v1.zip"
+    type: file
+    description: "📄 Агент документооборота"
+  - path: "09_exports/models/"
+    type: directory
+    description: "🧠 Модели ИИ"
+  - path: "09_exports/models/anomaly_model.pkl"
+    type: file
+    description: "🤖 Модель аномалий"
+  - path: "09_exports/models/threat_classifier.pkl"
+    type: file
+    description: "🛡️ Модель классификации угроз"
+  - path: "09_exports/models/embeddings_index.bin"
+    type: file
+    description: "🧬 Эмбеддинги для поиска по знаниям"
+  - path: "09_exports/README.md"
+    type: file
+    description: "📚 Документация по экспорту"
+  - path: "10_experiments/"
+    type: directory
+    description: "🔬 Прототипы и исследовательские наработки"
+  - path: "10_experiments/strategies/"
+    type: directory
+    description: "🤖 Экспериментальные стратегии агентов"
+  - path: "10_experiments/strategies/adversarial.py"
+    type: file
+    description: "⚔️ Стратегия противодействия"
+  - path: "10_experiments/strategies/collaborative.py"
+    type: file
+    description: "🤝 Координация агентов"
+  - path: "10_experiments/strategies/README.md"
+    type: file
+    description: "📚 Документация стратегий"
+  - path: "10_experiments/learning_methods/"
+    type: directory
+    description: "📚 Новые методы обучения агентов"
+  - path: "10_experiments/learning_methods/rl_experiment.py"
+    type: file
+    description: "🎯 Подкреплённое обучение"
+  - path: "10_experiments/learning_methods/transfer_learning.py"
+    type: file
+    description: "🔄 Передача знаний"
+  - path: "10_experiments/learning_methods/README.md"
+    type: file
+    description: "📚 Документация методов обучения"
+  - path: "10_experiments/simulations/"
+    type: directory
+    description: "🧪 Симуляции и стресс-тесты"
+  - path: "10_experiments/simulations/attack_sim.py"
+    type: file
+    description: "💣 Имитация атак"
+  - path: "10_experiments/simulations/failover_sim.py"
+    type: file
+    description: "🔁 Тесты отказоустойчивости"
+  - path: "10_experiments/simulations/README.md"
+    type: file
+    description: "📚 Описание симуляций"
+  - path: "90_demos_and_examples/"
+    type: directory
+    description: "🎯 Демо-проекты и обучающие материалы"
+  - path: "90_demos_and_examples/showcases/"
+    type: directory
+    description: "📢 Примеры showcase-компаний"
+  - path: "90_demos_and_examples/showcases/security_firm/"
+    type: directory
+    description: "🔐 Демонстрационная фирма по безопасности"
+  - path: "90_demos_and_examples/showcases/security_firm/agents.yaml"
+    type: file
+    description: "🤖 Конфигурация агентов"
+  - path: "90_demos_and_examples/showcases/security_firm/policies.md"
+    type: file
+    description: "🔒 Политики безопасности"
+  - path: "90_demos_and_examples/showcases/security_firm/simulation_results.md"
+    type: file
+    description: "🧪 Результаты симуляции"
+  - path: "90_demos_and_examples/showcases/monitoring_service/"
+    type: directory
+    description: "📈 Сервис мониторинга систем"
+  - path: "90_demos_and_examples/showcases/monitoring_service/agents.yaml"
+    type: file
+    description: "🤖 Настройка агентов мониторинга"
+  - path: "90_demos_and_examples/showcases/monitoring_service/alerts.md"
+    type: file
+    description: "📈 Сценарии тревог"
+  - path: "90_demos_and_examples/testdata/"
+    type: directory
+    description: "📊 Тестовые данные"
+  - path: "90_demos_and_examples/testdata/sample_users.json"
+    type: file
+    description: "👥 Примеры пользователей"
+  - path: "90_demos_and_examples/testdata/sample_logs.json"
+    type: file
+    description: "📝 Примеры логов"
+  - path: "90_demos_and_examples/testdata/sample_attack_vectors.json"
+    type: file
+    description: "⚔️ Примеры векторов атак"
+  - path: "90_demos_and_examples/tutorials/"
+    type: directory
+    description: "📘 Обучающие проекты и инструкции"
+  - path: "90_demos_and_examples/tutorials/create_agent.md"
+    type: file
+    description: "📘 Создание нового агента"
+  - path: "90_demos_and_examples/tutorials/setup_ci_cd.md"
+    type: file
+    description: "📘 Настройка CI/CD"
+  - path: "90_demos_and_examples/tutorials/secure_deployment.md"
+    type: file
+    description: "📘 Безопасный деплой"
+  - path: "90_demos_and_examples/README.md"
+    type: file
+    description: "📚 Общая документация по демо"
+  - path: "99_misc/"
+    type: directory
+    description: "🧩 Прочие материалы и утилиты"
+  - path: "99_misc/dev_notes.md"
+    type: file
+    description: "✍️ Заметки для разработчиков"
+  - path: "99_misc/experimental_tools/"
+    type: directory
+    description: "🛠 Экспериментальные утилиты"
+  - path: "99_misc/experimental_tools/README.md"
+    type: file
+    description: "📚 Описание экспериментальных утилит"
+  - path: "99_misc/archive/"
+    type: directory
+    description: "🗂 Архив устаревших или временных данных"
+  - path: "99_misc/archive/code/"
+    type: directory
+    description: "📁 Архив исходного кода"
+  - path: "99_misc/archive/docs/"
+    type: directory
+    description: "📁 Архив документации"
